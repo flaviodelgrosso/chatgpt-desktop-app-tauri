@@ -1,4 +1,4 @@
-use crate::window::toggle_window;
+use crate::app::{updater, window};
 use tauri::{
     AppHandle, CustomMenuItem, Manager, SystemTray, SystemTrayEvent, SystemTrayMenu,
     SystemTrayMenuItem,
@@ -10,6 +10,10 @@ pub fn tray_menu() -> SystemTray {
     SystemTray::new().with_menu(
         SystemTrayMenu::new()
             .add_item(CustomMenuItem::new("github".to_string(), "View on GitHub"))
+            .add_item(CustomMenuItem::new(
+                "check_updates".to_string(),
+                "Check for Updates",
+            ))
             .add_item(
                 CustomMenuItem::new("dev_tools".to_string(), "Toggle Developer Tools")
                     .accelerator("CmdOrCtrl+Shift+I"),
@@ -30,12 +34,15 @@ pub fn tray_handler(handle: &AppHandle, event: SystemTrayEvent) {
             ..
         } => {
             win.move_window(Position::TrayCenter).unwrap();
-            toggle_window(&win);
+            window::toggle_window(&win);
         }
         SystemTrayEvent::MenuItemClick { id, .. } => match id.as_str() {
             "github" => {
                 tauri::api::shell::open(&handle.shell_scope(), env!("CARGO_PKG_REPOSITORY"), None)
                     .unwrap();
+            }
+            "check_updates" => {
+                updater::run_check_update(win.app_handle(), false, None);
             }
             "dev_tools" => {
                 win.open_devtools();

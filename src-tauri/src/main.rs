@@ -5,7 +5,7 @@
 
 mod app;
 
-use app::{menu, setup, window};
+use app::{cmd, menu, setup, updater, window};
 use tauri;
 
 fn main() {
@@ -13,6 +13,7 @@ fn main() {
 
     tauri::Builder::default()
         .menu(tauri::Menu::os_default(&context.package_info().name))
+        .invoke_handler(tauri::generate_handler![cmd::run_check_update])
         .setup(setup::init)
         .plugin(tauri_plugin_positioner::init())
         .system_tray(menu::tray_menu())
