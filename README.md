@@ -4,7 +4,7 @@
 
 # ChatGPT Desktop Application
 
-Unofficial open source OpenAI ChatGPT desktop app for macOS, Windows, and Linux menubar using Tauri (<https://tauri.app/it/>) and Rust
+Unofficial open source OpenAI ChatGPT desktop app for macOS, Windows, and Linux menubar using Tauri (<https://tauri.app/>) and Rust
 
 ![License](https://img.shields.io/badge/License-Apache%202-blue.svg)
 [![ChatGPT downloads](https://img.shields.io/github/downloads/flaviodelgrosso/chatgpt-desktop-app-tauri/total.svg)](https://github.com/flaviodelgrosso/chatgpt-desktop-app-tauri/releases)
