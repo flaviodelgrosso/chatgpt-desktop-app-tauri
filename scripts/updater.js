@@ -1,8 +1,9 @@
-const fs = require("fs");
-const path = require("path");
-const { getOctokit, context } = require("@actions/github");
-const c = require("kleur");
-const minimist = require("minimist");
+import fs from "fs";
+import path from "path";
+import fetch from "node-fetch";
+import { getOctokit, context } from "@actions/github";
+import c from "kleur";
+import minimist from "minimist";
 
 const $argv = () => minimist(process.argv.slice(2));
 
