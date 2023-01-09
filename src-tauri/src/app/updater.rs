@@ -1,4 +1,4 @@
-use tauri::{updater::UpdateResponse, AppHandle, Manager, Result, Wry};
+use tauri::{updater::UpdateResponse, AppHandle, Manager, Result, Window, Wry};
 
 pub fn run_check_update(app: AppHandle<Wry>, silent: bool, has_msg: Option<bool>) {
     tauri::async_runtime::spawn(async move {
@@ -52,16 +52,7 @@ Release Notes:
 
     if should_install {
         update.download_and_install().await?;
-
-        // Ask user if we need to restart the application
-        let should_exit = tauri::api::dialog::blocking::ask(
-            parent_window,
-            "Ready to Restart",
-            "The installation was successful, do you want to restart the application now?",
-        );
-        if should_exit {
-            app.restart();
-        }
+        ask_restarting(&app, parent_window);
     }
 
     Ok(())
@@ -72,16 +63,20 @@ pub async fn silent_install(app: AppHandle<Wry>, update: UpdateResponse<Wry>) ->
     let parent_window = windows.values().next();
 
     update.download_and_install().await?;
+    ask_restarting(&app, parent_window);
 
+    Ok(())
+}
+
+pub fn ask_restarting(app: &AppHandle<Wry>, parent_window: Option<&Window>) {
     // Ask user if we need to restart the application
     let should_exit = tauri::api::dialog::blocking::ask(
         parent_window,
         "Ready to Restart",
-        "The silent installation was successful, do you want to restart the application now?",
+        "The installation was successful, do you want to restart the application now?",
     );
+
     if should_exit {
         app.restart();
     }
-
-    Ok(())
 }
