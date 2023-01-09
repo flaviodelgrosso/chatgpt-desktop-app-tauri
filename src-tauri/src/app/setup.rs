@@ -26,7 +26,7 @@ pub fn init(app: &mut App) -> std::result::Result<(), Box<dyn std::error::Error>
         };
     }
 
-    let app = app.app_handle();
+    let app = app.handle();
     updater::run_check_update(app, false, None);
 
     Ok(())
