@@ -2,6 +2,7 @@
   "name": "chatgpt-app-tauri",
   "private": true,
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -18,6 +19,7 @@
     "@types/node": "^18.11.18",
     "kleur": "^4.1.5",
     "minimist": "^1.2.7",
+    "node-fetch": "^3.3.0",
     "typescript": "^4.8.2",
     "vite": "^4.0.0"
   }
