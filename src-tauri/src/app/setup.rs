@@ -1,11 +1,13 @@
 use tauri::{App, GlobalShortcutManager, Manager};
 
-use crate::window::{setup_window, toggle_window};
+use crate::app::{updater, window};
 
 pub fn init(app: &mut App) -> std::result::Result<(), Box<dyn std::error::Error>> {
     let handle = app.app_handle();
 
-    setup_window(&handle);
+    tauri::async_runtime::spawn(async move {
+        window::setup_window(&handle);
+    });
 
     {
         let handle = app.app_handle();
@@ -17,12 +19,15 @@ pub fn init(app: &mut App) -> std::result::Result<(), Box<dyn std::error::Error>
             shortcut
                 .register(accelerator, move || {
                     if let Some(w) = handle.get_window("main") {
-                        toggle_window(&w);
+                        window::toggle_window(&w);
                     }
                 })
                 .unwrap();
         };
     }
+
+    let app = app.app_handle();
+    updater::run_check_update(app, false, None);
 
     Ok(())
 }
