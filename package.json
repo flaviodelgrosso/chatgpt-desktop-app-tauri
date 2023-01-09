@@ -4,10 +4,13 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
+    "dev:fe": "vite",
+    "build:fe": "tsc && vite build",
+    "dev": "tauri dev",
+    "build": "dotenv -e .env.local tauri build",
     "preview": "vite preview",
     "updater": "node scripts/updater.js",
+    "signer": "tauri signer generate",
     "tauri": "tauri"
   },
   "dependencies": {
@@ -17,6 +20,7 @@
     "@actions/github": "^5.1.1",
     "@tauri-apps/cli": "^1.2.2",
     "@types/node": "^18.11.18",
+    "dotenv-cli": "^6.0.0",
     "kleur": "^4.1.5",
     "minimist": "^1.2.7",
     "node-fetch": "^3.3.0",
