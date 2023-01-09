@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "ChatGPT",
-    "version": "0.1.1"
+    "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
@@ -59,7 +59,7 @@
       "active": true,
       "dialog": false,
       "endpoints": ["https://flaviodelgrosso.github.io/chatgpt-desktop-app-tauri/releases.json"],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEU1RDVEMzFDQTRENkM3RjUKUldUMXg5YWtITlBWNVJwR3V6bys1NWZWYkttUFBoZVhPMzJMQ21ROXhGM1poeHBPRGJJa2VHb0YK"
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IERENzdEOUIxRTc5OTA2NjEKUldSaEJwbm5zZGwzM1hQU3Nwcm45K3RRSEVLVVk3ZmNvQU03b3BqdllDUFhiWE5meHRpNG5mL1gK"
     }
   }
 }
