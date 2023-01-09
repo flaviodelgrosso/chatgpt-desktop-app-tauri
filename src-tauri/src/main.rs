@@ -8,7 +8,8 @@ mod app;
 use app::{cmd, menu, setup, updater, window};
 use tauri;
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let context = tauri::generate_context!();
 
     tauri::Builder::default()
