@@ -10,6 +10,7 @@
     "build": "dotenv -e .env.local tauri build",
     "preview": "vite preview",
     "updater": "node scripts/updater.js",
+    "release": "node scripts/release.js",
     "fix:tray": "node scripts/override.js --json.tauri_systemTray_iconPath=\"icons/tray-icon-light.png\" --json.tauri_systemTray_iconAsTemplate=false",
     "fix:tray-mac": "node scripts/override.js --json.tauri_systemTray_iconPath=\"icons/tray-icon.png\" --json.tauri_systemTray_iconAsTemplate=true",
     "signer": "tauri signer generate",
