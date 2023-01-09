@@ -3,15 +3,10 @@ import path from "path";
 import fetch from "node-fetch";
 import { getOctokit, context } from "@actions/github";
 import c from "kleur";
-import minimist from "minimist";
-
-const $argv = () => minimist(process.argv.slice(2));
+import { $argv, ROOT_PATH, relativePath, UPDATER_JSON_PATH } from "./utils.js";
 
 (async () => {
   const argv = $argv();
-  const ROOT_PATH = process.cwd();
-  const UPDATER_JSON_PATH = path.join(ROOT_PATH, "updater", "releases.json");
-  const relativePath = (p) => `${p.split(ROOT_PATH)?.[1].substring(1)}` || "";
 
   let owner, repo;
 
