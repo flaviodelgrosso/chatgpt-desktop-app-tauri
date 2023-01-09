@@ -4,22 +4,26 @@ use tauri::{
 };
 
 pub fn setup_window(handle: &AppHandle) {
-    WindowBuilder::new(
-        handle,
-        "main",
-        WindowUrl::App("https://chat.openai.com/chat".into()),
-    )
-    .title("ChatGPT")
-    .fullscreen(false)
-    .inner_size(450.0, 550.0)
-    .decorations(false)
-    .always_on_top(true)
-    .resizable(true)
-    .visible(false)
-    .initialization_script(include_str!("../assets/init.ts"))
-    .user_agent("chrome")
-    .build()
-    .unwrap();
+    let app = handle.clone();
+
+    tauri::async_runtime::spawn(async move {
+        WindowBuilder::new(
+            &app,
+            "main",
+            WindowUrl::App("https://chat.openai.com/chat".into()),
+        )
+        .title("ChatGPT")
+        .fullscreen(false)
+        .inner_size(450.0, 550.0)
+        .decorations(false)
+        .always_on_top(true)
+        .resizable(true)
+        .visible(false)
+        .initialization_script(include_str!("../assets/init.ts"))
+        .user_agent("chrome")
+        .build()
+        .unwrap();
+    });
 }
 
 pub fn on_window_event(event: GlobalWindowEvent) {
