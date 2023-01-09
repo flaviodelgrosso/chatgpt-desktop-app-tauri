@@ -19,7 +19,7 @@ pub fn run_check_update(app: AppHandle<Wry>, silent: bool, has_msg: Option<bool>
                 tauri::api::dialog::message(
                     app.app_handle().get_window("core").as_ref(),
                     "ChatGPT",
-                    "Your ChatGPT is up to date",
+                    "ChatGPT Desktop is updated!",
                 );
             }
         }
