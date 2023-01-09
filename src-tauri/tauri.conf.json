@@ -59,7 +59,7 @@
       "active": true,
       "dialog": false,
       "endpoints": ["https://flaviodelgrosso.github.io/chatgpt-desktop-app-tauri/releases.json"],
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IERENzdEOUIxRTc5OTA2NjEKUldSaEJwbm5zZGwzM1hQU3Nwcm45K3RRSEVLVVk3ZmNvQU03b3BqdllDUFhiWE5meHRpNG5mL1gK"
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEE4NTQ5REE3OTc5MkQ1QzMKUldURDFaS1hwNTFVcUg5Vk45V0prclk3RGt1SHRHYm5OUjNlYnZ2SVQ4WkRYd0V6dkxLbCtoWWoK"
     }
   }
 }
