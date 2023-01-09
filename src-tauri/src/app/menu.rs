@@ -42,7 +42,7 @@ pub fn tray_handler(handle: &AppHandle, event: SystemTrayEvent) {
                     .unwrap();
             }
             "check_updates" => {
-                updater::run_check_update(win.app_handle(), false, None);
+                updater::run_check_update(win.app_handle(), false, Some(true));
             }
             "dev_tools" => {
                 win.open_devtools();
