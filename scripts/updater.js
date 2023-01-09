@@ -65,6 +65,7 @@ const $argv = () => minimist(process.argv.slice(2));
   const updateData = {
     version: tag.name,
     pub_date: new Date().toISOString(),
+    notes: latestRelease.body,
     platforms: {
       win64: { signature: "", url: "" }, // compatible with older formats
       linux: { signature: "", url: "" }, // compatible with older formats
