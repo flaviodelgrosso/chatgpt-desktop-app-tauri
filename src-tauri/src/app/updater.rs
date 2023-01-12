@@ -2,20 +2,28 @@ use tauri::{updater::UpdateResponse, AppHandle, Manager, Result, Window, Wry};
 
 pub fn run_check_update(app: AppHandle<Wry>, silent: bool, has_msg: Option<bool>) {
     tauri::async_runtime::spawn(async move {
-        let result = app.updater().check().await;
-        let update_resp = result.unwrap();
+        let update_resp = app.updater().check().await.expect("Failed to check update");
+        // check if there is an update available
         if update_resp.is_update_available() {
+            // check if silent mode is enabled
             if silent {
                 tauri::async_runtime::spawn(async move {
-                    silent_install(app, update_resp).await.unwrap();
+                    silent_install(app, update_resp)
+                        .await
+                        .expect("Failed to silently install update");
                 });
             } else {
                 tauri::async_runtime::spawn(async move {
-                    prompt_for_install(app, update_resp).await.unwrap();
+                    prompt_for_install(app, update_resp)
+                        .await
+                        .expect("Failed to prompt for install update");
                 });
             }
-        } else if let Some(v) = has_msg {
+        }
+        // check if has message
+        else if let Some(v) = has_msg {
             if v {
+                // get the window by name which is `core`
                 tauri::api::dialog::message(
                     app.app_handle().get_window("core").as_ref(),
                     "ChatGPT",
@@ -69,7 +77,6 @@ pub async fn silent_install(app: AppHandle<Wry>, update: UpdateResponse<Wry>) ->
 }
 
 pub fn ask_restarting(app: &AppHandle<Wry>, parent_window: Option<&Window>) {
-    // Ask user if we need to restart the application
     let should_exit = tauri::api::dialog::blocking::ask(
         parent_window,
         "Ready to Restart",

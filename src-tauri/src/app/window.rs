@@ -7,7 +7,7 @@ pub fn setup_window(handle: &AppHandle) {
     let app = handle.clone();
 
     tauri::async_runtime::spawn(async move {
-        WindowBuilder::new(
+        let config = WindowBuilder::new(
             &app,
             "main",
             WindowUrl::App("https://chat.openai.com/chat".into()),
@@ -19,10 +19,9 @@ pub fn setup_window(handle: &AppHandle) {
         .always_on_top(true)
         .resizable(true)
         .visible(false)
-        .initialization_script(include_str!("../assets/init.ts"))
-        .user_agent("chrome")
-        .build()
-        .unwrap();
+        .initialization_script(include_str!("../assets/init.ts"));
+
+        config.build().unwrap();
     });
 }
 
