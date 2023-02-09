@@ -1,4 +1,4 @@
-use tauri::{App, GlobalShortcutManager, Manager, ActivationPolicy};
+use tauri::{App, GlobalShortcutManager, Manager};
 
 use crate::app::{updater, window};
 
@@ -27,7 +27,7 @@ pub fn init(app: &mut App) -> std::result::Result<(), Box<dyn std::error::Error>
     }
 
     #[cfg(target_os = "macos")]
-    app.set_activation_policy(ActivationPolicy::Accessory);
+    app.set_activation_policy(tauri::ActivationPolicy::Accessory);
 
     let app = app.handle();
     updater::run_check_update(app, false, None);
