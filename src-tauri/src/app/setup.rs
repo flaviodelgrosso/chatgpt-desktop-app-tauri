@@ -26,7 +26,7 @@ pub fn init(app: &mut App) -> std::result::Result<(), Box<dyn std::error::Error>
         };
     }
 
-    // hide from dock on mac
+    #[cfg(target_os = "macos")]
     app.set_activation_policy(ActivationPolicy::Accessory);
 
     let app = app.handle();
