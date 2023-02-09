@@ -1,4 +1,4 @@
-use tauri::{App, GlobalShortcutManager, Manager};
+use tauri::{App, GlobalShortcutManager, Manager, ActivationPolicy};
 
 use crate::app::{updater, window};
 
