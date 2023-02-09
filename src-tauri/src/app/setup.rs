@@ -26,6 +26,9 @@ pub fn init(app: &mut App) -> std::result::Result<(), Box<dyn std::error::Error>
         };
     }
 
+    #[cfg(target_os = "macos")]
+    app.set_activation_policy(tauri::ActivationPolicy::Accessory);
+
     let app = app.handle();
     updater::run_check_update(app, false, None);
 
