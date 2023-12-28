@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "ChatGPT",
-    "version": "0.1.1"
+    "version": "0.2.0"
   },
   "tauri": {
     "allowlist": {
@@ -29,7 +29,13 @@
         "depends": []
       },
       "externalBin": [],
-      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
       "identifier": "com.flaviodelgrosso.chatgpt",
       "longDescription": "ChatGPT Desktop Application",
       "publisher": "Flavio Del Grosso",
@@ -58,7 +64,9 @@
     "updater": {
       "active": true,
       "dialog": false,
-      "endpoints": ["https://flaviodelgrosso.github.io/chatgpt-desktop-app-tauri/releases.json"],
+      "endpoints": [
+        "https://flaviodelgrosso.github.io/chatgpt-desktop-app-tauri/releases.json"
+      ],
       "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEE4NTQ5REE3OTc5MkQ1QzMKUldURDFaS1hwNTFVcUg5Vk45V0prclk3RGt1SHRHYm5OUjNlYnZ2SVQ4WkRYd0V6dkxLbCtoWWoK"
     }
   }
