@@ -1,0 +1,35 @@
+{
+  "version": "v0.2.1",
+  "pub_date": "2023-12-28T21:03:15.800Z",
+  "notes": "See the assets to download this version and install.",
+  "platforms": {
+    "win64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURDFaS1hwNTFVcUtaWGlMRzhSZkdBZU5HLytCK01LeEVtS0ZyMVF1M1FNSGFJWDQ0bkdCWnltK3QrQWg5SXNMRW43eUZPRnZUcnJXR1VmRnBrSTZ4VWZwNUlMd3V5YndZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzAzNzk3Mzc1CWZpbGU6Q2hhdEdQVF8wLjIuMV94NjRfZW4tVVMubXNpLnppcApWR3FSOEltLzhBbkY4V240RHB5dGtlSzhZVEFRbTRSczBNc09vT1ZFRVpzcTllc3VDa3llT1IyVG16R3lwR3ZzTElMaGFob3dZeENkcksrYVJTVnJBdz09Cg==",
+      "url": "https://github.com/flaviodelgrosso/chatgpt-desktop-app-tauri/releases/download/v0.2.1/ChatGPT_0.2.1_x64_en-US.msi.zip"
+    },
+    "linux": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURDFaS1hwNTFVcUtQYkJzb2lieE9zUklZc2FHU085dWY1Skx3N0ZKdWE0S0tYYnBQMGJrR1dhT0dBVHNMVXZMNkFLNmRVLzBXdllXZ01JcXh5OTh1eHNlYVdPek9hRVFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzAzNzk3MzExCWZpbGU6Y2hhdC1ncHRfMC4yLjFfYW1kNjQuQXBwSW1hZ2UudGFyLmd6ClpEVklTNEJJVCtaSEtvSVBnUTNMTEpRK3NTZ1NiY1hUMjlGbW1WUjY0UXA2ZDUvdjR2T2xweEErZEYveWVqc2dadjhRTml6dzJaeTRPSUtGcW9TM0JRPT0K",
+      "url": "https://github.com/flaviodelgrosso/chatgpt-desktop-app-tauri/releases/download/v0.2.1/chat-gpt_0.2.1_amd64.AppImage.tar.gz"
+    },
+    "darwin": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURDFaS1hwNTFVcUU1cm53SE9zSDlHL3A5bDhkZmRzdU1WNFZQb3hjNjRyOUJsQWxadmk1NEJ0d1gybzVMeXc3bWl1dE44S1lvSXNObUdvOEFLdG9NQ2ROdlhSaXhocWdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzAzNzk3MzMyCWZpbGU6Q2hhdEdQVC5hcHAudGFyLmd6CkVCMWVtZHFkUUQyY0h4Tjd0NW9qbDU3eVdLSGVXL3FPWnBqU1Q1TFFZSFArSEcyWVlBMEJDZW8rODNISkFJNHB5WnRCZjZqcS9oNjZjaVdPQXAyS0FRPT0K",
+      "url": "https://github.com/flaviodelgrosso/chatgpt-desktop-app-tauri/releases/download/v0.2.1/ChatGPT.app.tar.gz"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURDFaS1hwNTFVcUU1cm53SE9zSDlHL3A5bDhkZmRzdU1WNFZQb3hjNjRyOUJsQWxadmk1NEJ0d1gybzVMeXc3bWl1dE44S1lvSXNObUdvOEFLdG9NQ2ROdlhSaXhocWdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzAzNzk3MzMyCWZpbGU6Q2hhdEdQVC5hcHAudGFyLmd6CkVCMWVtZHFkUUQyY0h4Tjd0NW9qbDU3eVdLSGVXL3FPWnBqU1Q1TFFZSFArSEcyWVlBMEJDZW8rODNISkFJNHB5WnRCZjZqcS9oNjZjaVdPQXAyS0FRPT0K",
+      "url": "https://github.com/flaviodelgrosso/chatgpt-desktop-app-tauri/releases/download/v0.2.1/ChatGPT.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURDFaS1hwNTFVcUU1cm53SE9zSDlHL3A5bDhkZmRzdU1WNFZQb3hjNjRyOUJsQWxadmk1NEJ0d1gybzVMeXc3bWl1dE44S1lvSXNObUdvOEFLdG9NQ2ROdlhSaXhocWdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzAzNzk3MzMyCWZpbGU6Q2hhdEdQVC5hcHAudGFyLmd6CkVCMWVtZHFkUUQyY0h4Tjd0NW9qbDU3eVdLSGVXL3FPWnBqU1Q1TFFZSFArSEcyWVlBMEJDZW8rODNISkFJNHB5WnRCZjZqcS9oNjZjaVdPQXAyS0FRPT0K",
+      "url": "https://github.com/flaviodelgrosso/chatgpt-desktop-app-tauri/releases/download/v0.2.1/ChatGPT.app.tar.gz"
+    },
+    "linux-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURDFaS1hwNTFVcUtQYkJzb2lieE9zUklZc2FHU085dWY1Skx3N0ZKdWE0S0tYYnBQMGJrR1dhT0dBVHNMVXZMNkFLNmRVLzBXdllXZ01JcXh5OTh1eHNlYVdPek9hRVFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzAzNzk3MzExCWZpbGU6Y2hhdC1ncHRfMC4yLjFfYW1kNjQuQXBwSW1hZ2UudGFyLmd6ClpEVklTNEJJVCtaSEtvSVBnUTNMTEpRK3NTZ1NiY1hUMjlGbW1WUjY0UXA2ZDUvdjR2T2xweEErZEYveWVqc2dadjhRTml6dzJaeTRPSUtGcW9TM0JRPT0K",
+      "url": "https://github.com/flaviodelgrosso/chatgpt-desktop-app-tauri/releases/download/v0.2.1/chat-gpt_0.2.1_amd64.AppImage.tar.gz"
+    },
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVURDFaS1hwNTFVcUtaWGlMRzhSZkdBZU5HLytCK01LeEVtS0ZyMVF1M1FNSGFJWDQ0bkdCWnltK3QrQWg5SXNMRW43eUZPRnZUcnJXR1VmRnBrSTZ4VWZwNUlMd3V5YndZPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzAzNzk3Mzc1CWZpbGU6Q2hhdEdQVF8wLjIuMV94NjRfZW4tVVMubXNpLnppcApWR3FSOEltLzhBbkY4V240RHB5dGtlSzhZVEFRbTRSczBNc09vT1ZFRVpzcTllc3VDa3llT1IyVG16R3lwR3ZzTElMaGFob3dZeENkcksrYVJTVnJBdz09Cg==",
+      "url": "https://github.com/flaviodelgrosso/chatgpt-desktop-app-tauri/releases/download/v0.2.1/ChatGPT_0.2.1_x64_en-US.msi.zip"
+    }
+  }
+}
